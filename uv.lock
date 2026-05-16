@@ -47,7 +47,7 @@ wheels = [
 [[package]]
 name = "backend"
 version = "0.1.0"
-source = { virtual = "apps/backend" }
+source = { editable = "apps/backend" }
 
 [[package]]
 name = "click"
