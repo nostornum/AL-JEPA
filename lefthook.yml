@@ -1,0 +1,25 @@
+commit-msg:
+  jobs:
+    - name: conventional-commit
+      run: uv run gitlint --msg-filename {1}
+
+pre-commit:
+  piped: true
+  jobs:
+    - name: format
+      glob: "*.py"
+      run: uv run ruff format {staged_files}
+      stage_fixed: true
+    - name: lint
+      glob: "*.py"
+      run: uv run ruff check --fix {staged_files}
+      stage_fixed: true
+    - name: typecheck
+      glob: "*.py"
+      run: uv run ty check {staged_files}
+    - name: lock
+      run: uv lock
+      stage_fixed: true
+    - name: requirements
+      run: uv export --no-hashes -o requirements.txt
+      stage_fixed: true

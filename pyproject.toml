@@ -1,0 +1,36 @@
+[project]
+name = "al-jepa"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["backend", "mugen"]
+
+[dependency-groups]
+dev = ["gitlint>=0.19.1", "lefthook>=2.1.6", "ruff>=0.15.13", "ty>=0.0.37"]
+
+[tool.ruff]
+indent-width = 4
+line-length = 320
+include = ["pyproject.toml", "*.py", "*.ipynb"]
+
+[tool.ruff.lint]
+extend-select = ["ICN", "I"]
+extend-fixable = ["ICN", "I"]
+
+[tool.ruff.format]
+line-ending = "lf"
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint.isort]
+order-by-type = true
+lines-between-types = 1
+lines-after-imports = 2
+force-wrap-aliases = true
+
+[tool.ruff.lint.flake8-import-conventions.extend-aliases]
+"torchvision.transforms.v2.functional" = "TF"
+"torch.nn.functional" = "F"
+"numpy.typing" = "npt"

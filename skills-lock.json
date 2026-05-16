@@ -7,6 +7,12 @@
       "skillPath": "skills/einx/SKILL.md",
       "computedHash": "6d24eda02f1148ca121944cb59930c9dd5608066b18480f37529ab0fb7b25d39"
     },
+    "lefthook": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/lefthook/SKILL.md",
+      "computedHash": "d9a2e1500cb56785c8f683aa814df2d32774f47e60d42296d687447b96de03f8"
+    },
     "msgspec": {
       "source": "nostornum/deep-skills",
       "sourceType": "github",
