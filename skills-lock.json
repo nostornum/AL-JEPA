@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "einx": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/einx/SKILL.md",
+      "computedHash": "6d24eda02f1148ca121944cb59930c9dd5608066b18480f37529ab0fb7b25d39"
+    },
+    "msgspec": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/msgspec/SKILL.md",
+      "computedHash": "29be5a186004f665aef2cd598b583313c1bd92fcf23866f0ef1e8e298e197651"
+    },
+    "polars": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/polars/SKILL.md",
+      "computedHash": "d1eb43f95b5082af4aa7e7834a20eea453395dcd98a06a5fd52a35036bdf6441"
+    },
+    "research": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/research/SKILL.md",
+      "computedHash": "799f89ea600321c0848f015e96e957a1512d13944bd9126a4dd0cead3603b8af"
+    },
+    "ruff": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ruff/SKILL.md",
+      "computedHash": "af6d4eacc1ca13db5bb8713aa0dfce7ab65f0dc16f7de278c0dc7b6940b82474"
+    },
+    "ty": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ty/SKILL.md",
+      "computedHash": "6e6835e1907957d0f5cfd52faa0aeaef3dfd4ae8605ebf37f1a2d58ba57831c9"
+    },
+    "tyro": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tyro/SKILL.md",
+      "computedHash": "f0021fa0a9c406222a3081796136a19e656b9d0f593f7fa67606c733a8bfc324"
+    },
+    "uv": {
+      "source": "nostornum/deep-skills",
+      "sourceType": "github",
+      "skillPath": "skills/uv/SKILL.md",
+      "computedHash": "7c6f20e47a6acca4a6c3c778934e6abd80f2ce1e9b12855f36270025e4799858"
+    }
+  }
+}
