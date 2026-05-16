@@ -11,15 +11,15 @@ pre-commit:
         piped: true
         jobs:
           - name: format
-            glob: "*.py"
+            glob: "*.{py,ipynb}"
             run: uv run ruff format {staged_files}
             stage_fixed: true
           - name: lint
-            glob: "*.py"
+            glob: "*.{py,ipynb}"
             run: uv run ruff check --fix {staged_files}
             stage_fixed: true
           - name: typecheck
-            glob: "*.py"
+            glob: "*.{py,ipynb}"
             run: uv run ty check {staged_files}
     - name: deps
       glob: "pyproject.toml"
