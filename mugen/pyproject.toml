@@ -5,7 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 authors = [{ name = "nostornum", email = "nostornum@gmail.com" }]
 requires-python = ">=3.13"
-dependencies = ["torch>=2.12.0", "torchvision>=0.27.0"]
+dependencies = [
+    "accelerate>=1.13.0",
+    "einx[torch]>=0.4.3",
+    "matplotlib>=3.10.9",
+    "msgspec>=0.21.1",
+    "safetensors>=0.7.0",
+    "torch>=2.12.0",
+    "torchvision>=0.27.0",
+    "tqdm>=4.67.3",
+    "tyro>=1.0.13",
+    "wandb[media]>=0.26.1",
+]
 
 [project.scripts]
 mugen = "mugen:main"

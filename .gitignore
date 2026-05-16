@@ -397,3 +397,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,git,python,visualstudiocode,jupyternotebooks,node
+# Research library — fully ignored
+research/
