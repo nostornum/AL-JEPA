@@ -4,6 +4,7 @@ version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = []
 
+
 [tool.uv.sources]
 mugen = { workspace = true }
 backend = { workspace = true }
@@ -11,9 +12,16 @@ torch = { index = "torch-cuda" }
 torchvision = { index = "torch-cuda" }
 
 [[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+exclude-newer = "3 days"
+
+[[tool.uv.index]]
 name = "torch-cuda"
 url = "https://download.pytorch.org/whl/cu132"
 explicit = true
+exclude-newer = "3 days"
 
 [tool.uv.workspace]
 members = ["apps/backend", "mugen"]
