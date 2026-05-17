@@ -1,12 +1,12 @@
 [project]
-name = "al-jepa"
+name = "songen"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = ["songen-core", "songen-api"]
 
 [tool.uv.sources]
-mugen = { workspace = true }
-backend = { workspace = true }
+songen-core = { workspace = true }
+songen-api = { workspace = true }
 torch = { index = "torch-cuda" }
 torchvision = { index = "torch-cuda" }
 
@@ -26,7 +26,7 @@ exclude-newer = "3 days"
 preview = true
 
 [tool.uv.workspace]
-members = ["apps/backend", "mugen"]
+members = ["packages/core", "packages/api"]
 
 [dependency-groups]
 dev = ["gitlint>=0.19.1", "lefthook>=2.1.6", "ruff>=0.15.12", "ty>=0.0.35"]
