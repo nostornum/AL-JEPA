@@ -33,4 +33,4 @@ pre-commit:
           - run: git add uv.lock requirements.txt
     - name: test
       glob: "*.py"
-      run: uv run pytest -x -q
+      run: uv run pytest -x -q; ec=$?; [ $ec -eq 5 ] && exit 0 || exit $ec

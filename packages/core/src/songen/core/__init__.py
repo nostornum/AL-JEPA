@@ -1,7 +1,11 @@
 import tyro
 
-from .train import main as _train
+from .train import main as train
 
 
 def main() -> None:
-    tyro.extras.subcommand_cli_from_dict({"train": _train})
+    tyro.extras.subcommand_cli_from_dict(
+        {
+            "train": train,
+        }
+    )
