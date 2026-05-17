@@ -36,6 +36,7 @@ click==8.1.3
 colorama==0.4.6 ; sys_platform == 'win32'
     # via
     #   click
+    #   pytest
     #   tqdm
 contourpy==1.3.3
     # via
@@ -95,6 +96,8 @@ imageio==2.37.3
     #   wandb
 imageio-ffmpeg==0.6.0
     # via moviepy
+iniconfig==2.3.0
+    # via pytest
 jinja2==3.1.6
     # via
     #   bokeh
@@ -183,6 +186,7 @@ packaging==26.2
     #   huggingface-hub
     #   matplotlib
     #   plotly
+    #   pytest
     #   wandb
 pillow==11.3.0
     # via
@@ -197,6 +201,12 @@ platformdirs==4.9.6
     # via wandb
 plotly==6.7.0
     # via wandb
+pluggy==1.6.0
+    # via pytest
+polars==1.40.1
+    # via songen-core
+polars-runtime-32==1.40.1
+    # via polars
 proglog==0.1.12
     # via moviepy
 protobuf==7.34.1
@@ -210,9 +220,12 @@ pydantic==2.13.4
 pydantic-core==2.46.4
     # via pydantic
 pygments==2.20.0
-    # via rich
+    # via
+    #   pytest
+    #   rich
 pyparsing==3.3.2
     # via matplotlib
+pytest==9.0.3
 python-dateutil==2.9.0.post0
     # via
     #   arrow
