@@ -1,7 +1,7 @@
 [project]
 name = "songen-core"
 version = "0.1.0"
-description = "Music genre classification – model, training, shared transforms"
+description = "Song genre classification - model, training, shared transforms"
 authors = [{ name = "nostornum", email = "nostornum@gmail.com" }]
 requires-python = ">=3.13"
 dependencies = [

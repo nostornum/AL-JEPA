@@ -1,11 +1,9 @@
 [project]
 name = "songen-api"
 version = "0.1.0"
-description = "Music genre classification – FastAPI inference server"
+description = "Music genre classification - FastAPI inference server"
 requires-python = ">=3.13"
-dependencies = [
-    "songen-core",
-]
+dependencies = ["songen-core"]
 
 [tool.uv.sources]
 songen-core = { workspace = true }
