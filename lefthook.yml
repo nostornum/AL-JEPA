@@ -31,3 +31,6 @@ pre-commit:
           - run: uv export --all-packages --no-hashes -o requirements.txt
             stage_fixed: true
           - run: git add uv.lock requirements.txt
+    - name: test
+      glob: "*.py"
+      run: uv run pytest -x -q
