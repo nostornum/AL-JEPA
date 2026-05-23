@@ -28,7 +28,7 @@ pre-commit:
         jobs:
           - run: uv lock
             stage_fixed: true
-          - run: uv export --all-packages --no-hashes -o requirements.txt
+          - run: uv export --all-packages --no-hashes --quiet -o requirements.txt
             stage_fixed: true
           - run: git add uv.lock requirements.txt
     - name: test
