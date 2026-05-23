@@ -5,6 +5,9 @@ requires-python = ">=3.13"
 dependencies = ["songen-core", "songen-api"]
 
 [dependency-groups]
+data = [
+    "huggingface-hub[cli]>=1.14.0",
+]
 dev = [
     "gitlint>=0.19.1",
     "lefthook>=2.1.6",
