@@ -406,3 +406,6 @@ $RECYCLE.BIN/
 
 # Dataset storage
 /data
+
+# Ignore sessions
+__marimo__

@@ -1,5 +1,9 @@
 {
+  "marimo.disableManagedLanguageFeatures": true,
   "files.associations": {
     ".gitlint": "ini"
-  }
+  },
+  "files.exclude": {
+    "**/__marimo__": true
+  },
 }
