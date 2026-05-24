@@ -1,0 +1,17 @@
+[project]
+name = "songen-data"
+version = "0.1.0"
+description = "Song genre classification - audio dataset processing utilities"
+authors = [{ name = "nostornum", email = "nostornum@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = ["huggingface-hub>=1.14.0"]
+
+[project.scripts]
+songen-data = "songen.data:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/songen"]

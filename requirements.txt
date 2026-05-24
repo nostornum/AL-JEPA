@@ -6,6 +6,8 @@
     # via
     #   songen
     #   songen-api
+-e ./packages/data
+    # via songen
 accelerate==1.13.0
     # via songen-core
 annotated-doc==0.0.4
@@ -103,7 +105,9 @@ httpx==0.28.1
     #   fastapi
     #   huggingface-hub
 huggingface-hub==1.14.0
-    # via accelerate
+    # via
+    #   accelerate
+    #   songen-data
 idna==3.15
     # via
     #   anyio

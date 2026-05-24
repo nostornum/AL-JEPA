@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-songen = "songen.core:main"
+songen-core = "songen.core:main"
 
 [build-system]
 requires = ["hatchling"]

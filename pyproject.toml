@@ -2,12 +2,9 @@
 name = "songen"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = ["songen-core", "songen-api"]
+dependencies = ["songen-data", "songen-core", "songen-api"]
 
 [dependency-groups]
-data = [
-    "huggingface-hub[cli]>=1.14.0",
-]
 dev = [
     "gitlint>=0.19.1",
     "lefthook>=2.1.6",
@@ -23,10 +20,11 @@ notebook = [
 ]
 
 [tool.uv.workspace]
-members = ["packages/core", "packages/api"]
+members = ["packages/data", "packages/core", "packages/api"]
 
 [tool.uv.sources]
 songen-api = { workspace = true }
+songen-data = { workspace = true }
 songen-core = { workspace = true }
 torch = { index = "torch-cuda" }
 torchvision = { index = "torch-cuda" }
