@@ -398,11 +398,11 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,git,python,visualstudiocode,jupyternotebooks,node
 
-# Dataset scouting output
-scout/
+# Research index library
+/research
 
-# Research library
-research/
+# Dataset candidates
+/scout
 
 # Dataset storage
-data
+/data
