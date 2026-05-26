@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Song genre classification - audio dataset processing utilities"
 authors = [{ name = "nostornum", email = "nostornum@gmail.com" }]
 requires-python = ">=3.13"
-dependencies = ["huggingface-hub>=1.14.0"]
+dependencies = [
+    "dagster>=1.13.6",
+    "dagster-dg-cli>=1.13.6",
+    "dagster-webserver>=1.13.6",
+    "huggingface-hub>=1.14.0",
+]
 
 [project.scripts]
 songen-data = "songen.data:main"
