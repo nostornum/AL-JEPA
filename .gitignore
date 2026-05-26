@@ -409,3 +409,6 @@ $RECYCLE.BIN/
 
 # Ignore sessions
 __marimo__
+
+# Dagster
+**/*.tmp*

@@ -4,6 +4,9 @@
     ".gitlint": "ini"
   },
   "files.exclude": {
-    "**/__marimo__": true
+    "**/__marimo__": true,
+    "**/*.pytest_cache": true,
+    "**/*.ruff_cache": true,
+    "**/*.tmp*": true
   },
 }
