@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "dagster": {
+      "source": "dagster-io/skills",
+      "sourceType": "github",
+      "skillPath": "skills/dagster-expert/skills/dagster-expert/SKILL.md",
+      "computedHash": "0de12b5fee0975ce5440efbea2f49016bfe6af3e6b0aba12a293bc03698939b4"
+    },
     "einx": {
       "source": "nostornum/deep-skills",
       "sourceType": "github",
