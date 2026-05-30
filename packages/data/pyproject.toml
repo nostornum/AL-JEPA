@@ -9,6 +9,8 @@ dependencies = [
     "dagster-dg-cli>=1.13.6",
     "dagster-webserver>=1.13.6",
     "huggingface-hub>=1.14.0",
+    "torchaudio>=2.11.0",
+    "torchcodec>=0.13.0",
 ]
 
 [project.scripts]

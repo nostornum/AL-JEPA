@@ -10,17 +10,33 @@
     # via songen
 accelerate==1.13.0
     # via songen-core
+alembic==1.18.4
+    # via dagster
 annotated-doc==0.0.4
     # via typer
 annotated-types==0.7.0
     # via pydantic
+antlr4-python3-runtime==4.13.2
+    # via dagster
 anyio==4.13.0
     # via
+    #   anysqlite
+    #   githubkit
+    #   gql
+    #   hishel
     #   httpx
     #   starlette
     #   watchfiles
+anysqlite==0.0.5
+    # via hishel
 arrow==1.2.3
     # via gitlint-core
+attrs==26.1.0
+    # via
+    #   jsonschema
+    #   referencing
+backoff==2.2.1
+    # via gql
 bokeh==3.9.0
     # via wandb
 certifi==2026.4.22
@@ -30,25 +46,38 @@ certifi==2026.4.22
     #   requests
     #   sentry-sdk
 cffi==2.0.0
-    # via soundfile
+    # via
+    #   cryptography
+    #   soundfile
 charset-normalizer==3.4.7
     # via requests
 click==8.1.3
     # via
+    #   click-aliases
+    #   dagster
+    #   dagster-cloud-cli
+    #   dagster-dg-core
+    #   dagster-webserver
     #   gitlint-core
     #   typer
     #   uvicorn
     #   wandb
+click-aliases==1.0.1
+    # via dagster-dg-core
 colorama==0.4.6 ; sys_platform == 'win32'
     # via
     #   click
     #   pytest
     #   tqdm
     #   uvicorn
+coloredlogs==14.0
+    # via dagster
 contourpy==1.3.3
     # via
     #   bokeh
     #   matplotlib
+cryptography==48.0.0
+    # via pyjwt
 cuda-bindings==13.2.0 ; sys_platform == 'linux'
     # via torch
 cuda-pathfinder==1.5.4 ; sys_platform == 'linux'
@@ -57,12 +86,42 @@ cuda-toolkit==13.2.1 ; sys_platform == 'linux'
     # via torch
 cycler==0.12.1
     # via matplotlib
+dagster==1.13.6
+    # via
+    #   dagster-dg-cli
+    #   dagster-graphql
+    #   dagster-webserver
+    #   songen-data
+dagster-cloud-cli==1.13.6
+    # via
+    #   dagster-dg-cli
+    #   dagster-dg-core
+dagster-dg-cli==1.13.6
+    # via songen-data
+dagster-dg-core==1.13.6
+    # via dagster-dg-cli
+dagster-graphql==1.13.6
+    # via dagster-webserver
+dagster-pipes==1.13.6
+    # via dagster
+dagster-rest-resources==0.29.6
+    # via dagster-dg-cli
+dagster-shared==1.13.6
+    # via
+    #   dagster
+    #   dagster-cloud-cli
+    #   dagster-dg-core
+    #   dagster-rest-resources
+dagster-webserver==1.13.6
+    # via songen-data
 decorator==5.2.1
     # via moviepy
 dnspython==2.8.0
     # via email-validator
 docstring-parser==0.18.0
-    # via tyro
+    # via
+    #   dagster
+    #   tyro
 einx==0.4.3
     # via songen-core
 email-validator==2.3.0
@@ -73,6 +132,7 @@ fastapi-cli==0.0.5
     # via fastapi
 filelock==3.29.0
     # via
+    #   dagster
     #   huggingface-hub
     #   torch
 fonttools==4.62.1
@@ -83,37 +143,71 @@ fsspec==2026.4.0
     # via
     #   huggingface-hub
     #   torch
+    #   universal-pathlib
 gitdb==4.0.12
     # via gitpython
+github3-py==4.0.1
+    # via dagster-cloud-cli
+githubkit==0.15.5
+    # via dagster-dg-cli
 gitlint==0.19.1
 gitlint-core==0.19.1
     # via gitlint
 gitpython==3.1.50
     # via wandb
+gql==4.0.0
+    # via
+    #   dagster-dg-core
+    #   dagster-graphql
+graphene==3.4.3
+    # via dagster-graphql
+graphql-core==3.2.8
+    # via
+    #   gql
+    #   graphene
+    #   graphql-relay
+graphql-relay==3.2.0
+    # via graphene
+greenlet==3.5.1 ; platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64'
+    # via sqlalchemy
+grpcio==1.80.0
+    # via
+    #   dagster
+    #   grpcio-health-checking
+grpcio-health-checking==1.80.0
+    # via dagster
 h11==0.16.0
     # via
     #   httpcore
     #   uvicorn
 hf-xet==1.5.0 ; platform_machine == 'AMD64' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'arm64' or platform_machine == 'x86_64'
     # via huggingface-hub
+hishel==0.1.5
+    # via githubkit
 httpcore==1.0.9
     # via httpx
 httptools==0.7.1
     # via uvicorn
 httpx==0.28.1
     # via
+    #   dagster-rest-resources
     #   fastapi
+    #   githubkit
+    #   hishel
     #   huggingface-hub
 huggingface-hub==1.14.0
     # via
     #   accelerate
     #   songen-data
+humanfriendly==10.0
+    # via coloredlogs
 idna==3.15
     # via
     #   anyio
     #   email-validator
     #   httpx
     #   requests
+    #   yarl
 imageio==2.37.3
     # via
     #   moviepy
@@ -125,15 +219,28 @@ iniconfig==2.3.0
 jinja2==3.1.6
     # via
     #   bokeh
+    #   dagster
+    #   dagster-cloud-cli
+    #   dagster-dg-core
     #   fastapi
     #   torch
+jsonschema==4.26.0
+    # via dagster-dg-core
+jsonschema-specifications==2025.9.1
+    # via jsonschema
 kiwisolver==1.5.0
     # via matplotlib
 lefthook==2.1.6
+mako==1.3.12
+    # via alembic
+markdown==3.10.2
+    # via dagster-dg-core
 markdown-it-py==4.2.0
     # via rich
 markupsafe==3.0.3
-    # via jinja2
+    # via
+    #   jinja2
+    #   mako
 matplotlib==3.10.9
     # via songen-core
 mdurl==0.1.2
@@ -142,8 +249,12 @@ moviepy==2.2.1
     # via wandb
 mpmath==1.3.0
     # via sympy
+msgpack==1.1.2
+    # via hishel
 msgspec==0.21.1
     # via songen-core
+multidict==6.7.1
+    # via yarl
 narwhals==2.21.0
     # via
     #   bokeh
@@ -194,7 +305,7 @@ nvidia-cusparselt-cu13==0.8.1 ; sys_platform == 'linux'
     # via torch
 nvidia-nccl-cu13==2.29.7 ; sys_platform == 'linux'
     # via torch
-nvidia-nvjitlink==13.2.78 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
+nvidia-nvjitlink==13.3.33 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via
     #   cuda-toolkit
     #   nvidia-cufft
@@ -208,11 +319,16 @@ packaging==26.2
     # via
     #   accelerate
     #   bokeh
+    #   dagster-cloud-cli
+    #   dagster-dg-core
+    #   dagster-shared
     #   huggingface-hub
     #   matplotlib
     #   plotly
     #   pytest
     #   wandb
+pathlib-abc==0.5.2
+    # via universal-pathlib
 pillow==11.3.0
     # via
     #   bokeh
@@ -223,7 +339,9 @@ pillow==11.3.0
     #   torchvision
     #   wandb
 platformdirs==4.9.6
-    # via wandb
+    # via
+    #   dagster-shared
+    #   wandb
 plotly==6.7.0
     # via wandb
 pluggy==1.6.0
@@ -234,15 +352,27 @@ polars-runtime-32==1.40.1
     # via polars
 proglog==0.1.12
     # via moviepy
-protobuf==7.34.1
-    # via wandb
+prompt-toolkit==3.0.52
+    # via questionary
+propcache==0.5.2
+    # via yarl
+protobuf==6.33.6
+    # via
+    #   dagster
+    #   grpcio-health-checking
+    #   wandb
 psutil==7.2.2
-    # via accelerate
+    # via
+    #   accelerate
+    #   dagster
 pycparser==3.0 ; implementation_name != 'PyPy'
     # via cffi
 pydantic==2.13.4
     # via
+    #   dagster-rest-resources
+    #   dagster-shared
     #   fastapi
+    #   githubkit
     #   wandb
 pydantic-core==2.46.4
     # via pydantic
@@ -250,32 +380,69 @@ pygments==2.20.0
     # via
     #   pytest
     #   rich
+pyjwt==2.13.0
+    # via github3-py
 pyparsing==3.3.2
     # via matplotlib
+pyreadline3==3.5.6 ; sys_platform == 'win32'
+    # via humanfriendly
 pytest==9.0.3
 python-dateutil==2.9.0.post0
     # via
     #   arrow
+    #   github3-py
+    #   graphene
     #   matplotlib
 python-dotenv==1.2.2
     # via
+    #   dagster
+    #   dagster-dg-core
     #   moviepy
     #   uvicorn
 python-multipart==0.0.28
     # via fastapi
+pytz==2026.2
+    # via dagster
+pywin32==311 ; sys_platform == 'win32'
+    # via dagster
 pyyaml==6.0.3
     # via
     #   accelerate
     #   bokeh
+    #   dagster-cloud-cli
+    #   dagster-dg-core
+    #   dagster-shared
     #   huggingface-hub
     #   uvicorn
     #   wandb
+questionary==2.1.1
+    # via dagster-cloud-cli
 rdkit==2026.3.1
     # via wandb
+referencing==0.37.0
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
 requests==2.34.0
-    # via wandb
+    # via
+    #   dagster
+    #   dagster-cloud-cli
+    #   dagster-graphql
+    #   github3-py
+    #   gql
+    #   requests-toolbelt
+    #   wandb
+requests-toolbelt==1.0.0
+    # via gql
 rich==15.0.0
-    # via typer
+    # via
+    #   dagster
+    #   dagster-dg-core
+    #   typer
+rpds-py==0.30.0
+    # via
+    #   jsonschema
+    #   referencing
 ruff==0.15.12
 safetensors==0.7.0
     # via
@@ -284,35 +451,66 @@ safetensors==0.7.0
 sentry-sdk==2.60.0
     # via wandb
 setuptools==81.0.0
-    # via torch
+    # via
+    #   dagster-cloud-cli
+    #   dagster-dg-core
+    #   torch
 sh==1.14.3 ; sys_platform != 'win32'
     # via gitlint-core
 shellingham==1.5.4
     # via typer
 six==1.17.0
-    # via python-dateutil
+    # via
+    #   dagster
+    #   python-dateutil
 smmap==5.0.3
     # via gitdb
 soundfile==0.13.1
     # via wandb
+sqlalchemy==2.0.49
+    # via
+    #   alembic
+    #   dagster
 starlette==0.46.2
-    # via fastapi
+    # via
+    #   dagster-graphql
+    #   dagster-webserver
+    #   fastapi
+structlog==25.5.0
+    # via dagster
 sympy==1.14.0
     # via
     #   einx
     #   torch
+tabulate==0.10.0
+    # via dagster
+termcolor==3.3.0
+    # via yaspin
+tomli==2.4.1
+    # via dagster
+tomlkit==0.13.2
+    # via
+    #   dagster-dg-core
+    #   dagster-shared
+toposort==1.10
+    # via dagster
 torch==2.12.0+cu132
     # via
     #   accelerate
     #   einx
     #   songen-core
     #   torchvision
+torchaudio==2.11.0
+    # via songen-data
+torchcodec==0.13.0+cu132
+    # via songen-data
 torchvision==0.27.0+cu132
     # via songen-core
 tornado==6.5.5 ; sys_platform != 'emscripten'
     # via bokeh
 tqdm==4.67.3
     # via
+    #   dagster
     #   huggingface-hub
     #   proglog
     #   songen-core
@@ -323,14 +521,25 @@ typeguard==4.5.1
     # via tyro
 typer==0.23.1
     # via
+    #   dagster-cloud-cli
+    #   dagster-dg-cli
+    #   dagster-dg-core
     #   fastapi-cli
     #   huggingface-hub
 typing-extensions==4.15.0
     # via
+    #   alembic
+    #   dagster-dg-core
+    #   dagster-shared
     #   fastapi
+    #   githubkit
+    #   graphene
+    #   grpcio
+    #   hishel
     #   huggingface-hub
     #   pydantic
     #   pydantic-core
+    #   sqlalchemy
     #   torch
     #   typeguard
     #   typing-inspection
@@ -340,21 +549,40 @@ typing-inspection==0.4.2
     # via pydantic
 tyro==1.0.13
     # via songen-core
+tzdata==2026.2
+    # via dagster
+universal-pathlib==0.3.10
+    # via dagster
+uritemplate==4.2.0
+    # via github3-py
 urllib3==2.7.0
     # via
     #   requests
     #   sentry-sdk
 uvicorn==0.47.0
     # via
+    #   dagster-webserver
     #   fastapi
     #   fastapi-cli
 uvloop==0.22.1 ; platform_python_implementation != 'PyPy' and sys_platform != 'cygwin' and sys_platform != 'win32'
     # via uvicorn
+validators==0.35.0
+    # via dagster-cloud-cli
 wandb==0.26.1
     # via songen-core
+watchdog==6.0.0
+    # via
+    #   dagster
+    #   dagster-dg-core
 watchfiles==1.1.1
     # via uvicorn
+wcwidth==0.7.0
+    # via prompt-toolkit
 websockets==16.0
     # via uvicorn
 xyzservices==2026.3.0
     # via bokeh
+yarl==1.24.2
+    # via gql
+yaspin==3.4.0
+    # via dagster-dg-core

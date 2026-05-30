@@ -22,6 +22,8 @@ songen-api = { workspace = true }
 songen-data = { workspace = true }
 songen-core = { workspace = true }
 torch = { index = "torch-cuda" }
+torchaudio = { index = "pypi" }
+torchcodec = { index = "torch-cuda" }
 torchvision = { index = "torch-cuda" }
 
 [[tool.uv.index]]
